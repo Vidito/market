@@ -1,4 +1,4 @@
-# Demo Project Usinf Django and TailwindCSS
+# Demo Project Using Django and TailwindCSS
 ## Features
 - **User Registration / Login**
 	> You need to sign up to see more features
