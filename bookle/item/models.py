@@ -22,5 +22,7 @@ class Item(models.Model):
     created_by = models.ForeignKey(User, related_name='items', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='item_images', blank=True, null=True)
     
+    class Meta:
+        ordering = ["-created_at"]
     def __str__(self):
         return self.name

@@ -19,7 +19,7 @@ LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -115,7 +115,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "static"
+STATICFILES_DIRS = [BASE_DIR / "staticfiles"]  
+
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
@@ -123,3 +126,28 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Jazzmin Settings for Admin Page
+JAZZMIN_UI_TWEAKS = {
+    "theme": "litera",
+    "dark_mode_theme": "darkly",
+}
+
+JAZZMIN_SETTINGS = {
+    # Title on the login screen (19 chars max)
+    'site_header': 'Bookle',
+     # title of the window
+    'site_title': 'Bookle',
+    # Title on the brand (19 chars max)
+    'site_brand': 'Bookle',
+    # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)
+    "login_logo": None,
+    # Logo to use for login form in dark themes (defaults to login_logo)
+    "login_logo_dark": None,
+    # Logo to use for your site, must be present in static files
+    'site_logo': None,
+    # Welcome text on the login screen
+    'welcome_sign': 'Welcome To Bookle',
+    # Copyright on the footer
+    "copyright": "@Pythonology",
+}
